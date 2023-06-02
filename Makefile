@@ -19,6 +19,7 @@ DOCKER := $(shell which docker)
 BUILDDIR ?= $(CURDIR)/build
 TEST_DOCKER_REPO=jackzampolin/linktest
 CGO_ENABLED ?= 1
+LINK_STATICALLY ?= true
 ARCH ?= x86_64
 TARGET_PLATFORM ?= linux/amd64
 
