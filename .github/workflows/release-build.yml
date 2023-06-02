@@ -72,11 +72,13 @@ jobs:
       - name: "Build release bundle: linux-${{ matrix.arch }}"
         run: |
           go env -w GOARCH=${{ matrix.arch }}
-          make clean build-release-bundle CC=${{ matrix.cc }} CXX=${{ matrix.cxx }}
+          make clean build CC=${{ matrix.cc }} CXX=${{ matrix.cxx }}
       - name: "Create checksum: linux-${{ matrix.arch }}"
         run: |
           cd ./build
           ls -laF
+          mv fnsad finschia-${{ env.VERSION }}-$(go env GOOS)-$(go env GOARCH)
+          tar -czf finschia-${{ env.ID }}.tgz finschia-${{ env.VERSION }}-$(go env GOOS)-$(go env GOARCH)
           md5sum finschia-${{ env.ID }}.tgz > ./finschia-${{ env.ID }}.md5
           sha256sum finschia-${{ env.ID }}.tgz > ./finschia-${{ env.ID }}.sha256
       - name: "Store artifact: linux-${{ matrix.arch }}"
@@ -128,7 +130,7 @@ jobs:
       - name: "Build release bundle: darwin-${{ matrix.arch }}"
         run: |
           go env -w GOARCH=${{ matrix.arch }}
-          make clean build-release-bundle
+          make clean build-release-bundle LINK_STATICALLY=false
       - name: "Create checksum: darwin-${{ matrix.arch }}"
         run: |
           cd ./build
