@@ -16,7 +16,8 @@ assert_variables() {
 
 assert_variables DAEMON_NAME \
 				 DAEMON_HOME \
-				 DAEMON_ALLOW_DOWNLOAD_BINARIES
+				 DAEMON_ALLOW_DOWNLOAD_BINARIES \
+				 LD_LIBRARY_PATH
 
 if [ -f initialized ]
 then

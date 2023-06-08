@@ -54,6 +54,7 @@ get_container_name() {
 
 assert_variables DAEMON_NAME \
 				 DAEMON_HOME \
+				 LD_LIBRARY_PATH \
 				 FIXTURE_NUM_REGIONS \
 				 FIXTURE_SYNCDIR \
 				 FIXTURE_CLIENT_KEYRING_BACKEND \

@@ -16,4 +16,4 @@ RUN go mod download
 COPY . ./
 
 # make a bundle
-RUN CGO_ENABLED=0 make build && cd build && tar -czf bundle.tar.gz *
+RUN BUILDDIR=$(realpath $(mktemp -dp .)) && BUILDDIR=$BUILDDIR make build-release-bundle && mv $BUILDDIR/*.tgz bundle.tar.gz
