@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+daemon=$1
+[ -n "$daemon" ]
+
+cosmovisor=$2
+[ -n "$cosmovisor" ]
+
+output=$3
+[ -n "$output" ]
+
+if [ "$(echo @CMAKE_BUILD_TYPE@ | awk '{print tolower($0)}')" = debug ]
+then
+	DEBUG=true
+else
+	DEBUG=false
+fi
+
+if [ $DEBUG = false ]
+then
+	exec 1>/dev/null 2>&1
+fi
+
+cp "$daemon" .
+cp "$cosmovisor" binaries/cosmovisor
+docker build -t @PROJECT_NAME@:local .
+
+touch $output
