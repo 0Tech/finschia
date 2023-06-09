@@ -36,8 +36,12 @@ create_bundle() {
 		;;
 		*)
 			# TODO: arch & os
-			local version=@FIXTURE_DAEMON_VERSION_NEW@
-			curl -Lo $upgrade_name.tar.gz @GITHUB_URL@/releases/download/v$version/@DAEMON_NAME@_${version}_linux_amd64.tgz
+			_version=@FIXTURE_DAEMON_VERSION_NEW@
+			_workdir=$(mktemp -dp .)
+			curl -Lo $_workdir/bundle.tar.gz @GITHUB_URL@/releases/download/v$_version/@CMAKE_PROJECT_NAME@-v$_version-linux-amd64.tgz
+			sh -c "cd $_workdir && tar -xzf bundle.tar.gz && cd @CMAKE_PROJECT_NAME@-v$_version-linux-amd64 && tar -czf ../../$upgrade_name.tar.gz *"
+			rm -rf $_workdir
+			# curl -Lo $upgrade_name.tar.gz @GITHUB_URL@/releases/download/v$_version/@CMAKE_PROJECT_NAME@-v$_version-linux-amd64.tgz
 		;;
 	esac
 }
