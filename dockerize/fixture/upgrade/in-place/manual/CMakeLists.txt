@@ -1,4 +1,3 @@
-set(FIXTURE_NUM_REGIONS 4)
 set(DAEMON_ALLOW_DOWNLOAD_BINARIES false)
 
 configure_file(../upgrade-chain.sh.in upgrade-chain.sh
@@ -11,6 +10,6 @@ configure_file(${IMAGE_SOURCE_DIR}/daemon.env.in daemon.env
 add_test(
   NAME upgrade_chain_manual
   COMMAND timeout 5m sh upgrade-chain.sh ChainsUpgradeManual 0)
-add_chains(ChainsUpgradeManual 1 ${FIXTURE_NUM_REGIONS} 1 5m)
+add_chains(ChainsUpgradeManual 1 ${FIXTURE_NUM_REGIONS} 1 90s)
 set_tests_properties(upgrade_chain_manual
   PROPERTIES FIXTURES_REQUIRED ChainsUpgradeManual)
