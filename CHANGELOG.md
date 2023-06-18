@@ -37,17 +37,24 @@ Ref: https://keepachangelog.com/en/1.0.0/
 ## [Unreleased]
 
 ### Features
+* (build) [\#202](https://github.com/Finschia/finschia/pull/202) bump up finschia-sdk from v0.47.1-0.20230517010045-e9fe90608161 to v0.47.1-rc1
+* (sdk) [\#204](https://github.com/Finschia/finschia/pull/204) apply Finschia/finschia-sdk#1019(backport Finschia/finschia-sdk#1012)
+* (ibc) [\#209](https://github.com/Finschia/finschia/pull/209) bump up ibc-go from v3.3.3 to v3.3.4-0.20230531095546-59c47ab8e095
 
 ### Improvements
+* (x/wasm) [\#191](https://github.com/Finschia/finschia/pull/191) bump up Finschia/wasmd from v0.1.3 to v0.1.4
 
 ### Bug Fixes
+* (build) [\#205](https://github.com/Finschia/finschia/pull/205) fix wasm error by changing from image to golang:1.18-alpine
 
 ### Breaking Changes
+* (sdk) [\#187](https://github.com/finschia/finschia/pull/187) Apply Finschia/finschia-sdk#999
 
 ### Build, CI
 * (ci) [\#185](https://github.com/Finschia/finschia/pull/185) update `tag.yml` github action
 * (ci) [\#189](https://github.com/Finschia/finschia/pull/189) add dependabot github action
 * (ci) [\#213](https://github.com/Finschia/finschia/pull/213) add mergify ci
+* (build) [\#188](https://github.com/Finschia/finschia/pull/188) fix example wrong app name in `--help` description of cli
 * (build) [\#211](https://github.com/Finschia/finschia/pull/211) Update release bundle structure for cosmovisor
 
 ### Docs
