@@ -130,7 +130,7 @@ import (
 )
 
 const appName = "Finschia"
-const upgradeName = "v2-Daisy"
+const upgradeName = "v3-Rose"
 
 var (
 	// DefaultNodeHome default home directories for the application daemon
@@ -662,7 +662,7 @@ func NewLinkApp(
 	app.UpgradeKeeper.SetUpgradeHandler(
 		upgradeName,
 		func(ctx sdk.Context, plan upgradetypes.Plan, fromVM module.VersionMap) (module.VersionMap, error) {
-			return app.mm.RunMigrations(ctx, app.configurator, fromVM)
+			return fromVM, nil
 		})
 
 	// must be before loading version
