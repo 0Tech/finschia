@@ -2,6 +2,8 @@ module github.com/Finschia/finschia/v2
 
 go 1.20
 
+replace github.com/Finschia/finschia-sdk => github.com/0Tech/finschia-sdk v0.34.4-0.20230809002728-170140a6e08e
+
 require (
 	github.com/Finschia/finschia-sdk v0.48.0-rc1
 	github.com/Finschia/ostracon v1.1.1
