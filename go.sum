@@ -57,6 +57,8 @@ github.com/Finschia/finschia-sdk v0.47.3-0.20230901101931-459e02bed1f9 h1:+2mVwN
 github.com/Finschia/finschia-sdk v0.47.3-0.20230901101931-459e02bed1f9/go.mod h1:aPRyqqg+PROtpd8H4ANuiIqEEw/QgajmAUqaoIUwvT4=
 github.com/Finschia/finschia-sdk v0.47.3-0.20230901123927-d108406a87df h1:EdP/zvCGEW6cQ9+FrA238kw9d7ZkNUOBIvfP8J0R2gg=
 github.com/Finschia/finschia-sdk v0.47.3-0.20230901123927-d108406a87df/go.mod h1:aPRyqqg+PROtpd8H4ANuiIqEEw/QgajmAUqaoIUwvT4=
+github.com/Finschia/finschia-sdk v0.47.3-0.20230901131032-c934f87839d0 h1:/4lwFl/cZiaSSODJKtiCJ3hq+ksX577iLRyz0eIwYuM=
+github.com/Finschia/finschia-sdk v0.47.3-0.20230901131032-c934f87839d0/go.mod h1:aPRyqqg+PROtpd8H4ANuiIqEEw/QgajmAUqaoIUwvT4=
 github.com/Finschia/ibc-go/v3 v3.3.3 h1:geNUwG7xU0vve1Rv8qATpAk59BL5thLuUcLvJ7xnkiM=
 github.com/Finschia/ibc-go/v3 v3.3.3/go.mod h1:YC5hldLSJQDoii3W2E9J07BVdTF7fesUQcATo5zQ248=
 github.com/Finschia/ostracon v1.1.0 h1:ruiqngsoCz1kJ3fGLJHflcvxbJrbg7QGDTruqxgLZKc=
